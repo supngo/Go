@@ -1,0 +1,25 @@
+{
+  "folders": [
+		{
+			"path": "GoMS"
+		},
+		{
+			"path": "GoMS/logger-service"
+		},
+		{
+			"path": "GoMS/authentication-service"
+		},
+		{
+			"path": "GoMS/docker"
+		},
+		{
+			"path": "GoMS/broker-service"
+		},
+		{
+			"path": "GoMS/front-end"
+		},
+		{
+			"path": "GoMS/listener-service"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+Postgres:
+go get github.com/jackc/pgconn
+go get github.com/jackc/pgx/v4
+go get github.com/jackc/pgx/v4/stdlib
+
+Encrypt:
+go get golang.org/x/crypto/bcrypt
+
+Http
+go get github.com/go-chi/chi/v5
+go get github.com/go-chi/chi/v5/middleware
+go get github.com/go-chi/cors
+
+mongodb:
+go get go.mongodb.org/mongo-driver/mongo
+go get go.mongodb.org/mongo-driver/mongo/options
+
+rabbitMQ:
+go get github.com/rabbitmq/amqp091-go
