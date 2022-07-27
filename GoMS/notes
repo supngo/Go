@@ -17,3 +17,32 @@ go get go.mongodb.org/mongo-driver/mongo/options
 
 rabbitMQ:
 go get github.com/rabbitmq/amqp091-go
+
+gRPC:
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.27
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative logs.proto
+go get google.golang.org/grpc
+go get google.golang.org/protobuf
+
+
+docker swarm:
+docker build -f logger-service.dockerfile -t thomdock/GoMS-logger-serivce:1.0.0 .
+docker push thomdock/GoMS-logger-serivce:1.0.0
+docker swarm init -> create a manager node
+docker swarm join-token manager -> add more manager node
+docker swarm join-token worker -> add more worker node
+docker swarm --token <Token> -> add worker node
+docker stack deploy -c docker-swarm.yml myapp -> deploy
+docker service scale myapp_broker-serivce=3 -> scale up
+docker service scale myapp_broker-service=1 -> scale down
+
+udpate service
+docker service scale myapp_broker-service=2 -> minimize down time
+docker service update -- image thomdock/GoMS-broker-service:1.0.1 myapp_broker-service
+
+stop docker swarm:
+docker service ls -> list all services in docker swarm
+docker service scale myapp_broker-service=0
+docker stack rm myapp -> bring down the whole docker swarm
+docker swarm leave --force -> leave the swarm
