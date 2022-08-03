@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 Makefile:7: *** missing separator.  Stop.
 
 
-# Make data base, printed on Tue Jul 26 14:53:41 2022
+# Make data base, printed on Wed Aug  3 11:40:30 2022
 
 # Variables
 
@@ -26,6 +26,7 @@ PROVIDE_FULLSTACK_ACTION = true
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
 GRADLE_HOME = /Users/su/Work/gradle-7.1.1
+ 
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -49,7 +50,7 @@ AUTH_BINARY = authApp
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # environment
-PATH = /usr/local/opt/openjdk@17/bin:/Users/su/opt/anaconda3/bin:/Users/su/opt/anaconda3/condabin:/Users/su/Work/apache-maven-3.6.3/bin:/Users/su/.jenv/shims:/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/su/Work/gradle-7.1.1/bin
+PATH = /usr/local/opt/openjdk@17/bin:/Users/su/go/bin:/Users/su/opt/anaconda3/bin:/Users/su/opt/anaconda3/condabin:/Users/su/Work/apache-maven-3.6.3/bin:/Users/su/.jenv/shims:/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/su/Work/gradle-7.1.1/bin
 # environment
 GOLANG_EXECUTABLE = go
 # environment
@@ -63,7 +64,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 UUID = 51636ebb-1e0f-40cd-b6e7-1b08b6553b43
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.LlRgijPkhj/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.od6RszroCC/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -105,7 +106,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 2
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -139,7 +140,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.70940
+XPC_SERVICE_NAME = com.microsoft.VSCode.73472
 # makefile (from `Makefile', line 2)
 BROKER_BINARY = brokerApp
 # automatic
@@ -173,7 +174,7 @@ MAKELEVEL := 0
 # environment
 CONDA_PREFIX = /Users/su/opt/anaconda3
 # environment
-VSCODE_PID = 88362
+VSCODE_PID = 7530
 # environment
 _CE_CONDA = 
 # environment
@@ -187,7 +188,8 @@ LANG = C
 
 # Directories
 
-# . (device 16777220, inode 43315125): 14 files, no impossibilities.
+ 
+# . (device 16777221, inode 43315125): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -240,6 +242,6 @@ Makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Jul 26 14:53:41 2022
+# Finished Make data base on Wed Aug  3 11:40:30 2022
 
  

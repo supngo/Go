@@ -27,7 +27,7 @@ go get google.golang.org/protobuf
 
 
 docker swarm:
-docker build -f logger-service.dockerfile -t thomdock/GoMS-logger-serivce:1.0.0 .
+docker build -f broker-service.dockerfile -t thomdock/goms-broker-service:1.0.0 .
 docker push thomdock/GoMS-logger-serivce:1.0.0
 docker swarm init -> create a manager node
 docker swarm join-token manager -> add more manager node
@@ -46,3 +46,27 @@ docker service ls -> list all services in docker swarm
 docker service scale myapp_broker-service=0
 docker stack rm myapp -> bring down the whole docker swarm
 docker swarm leave --force -> leave the swarm
+
+kubernetes:
+minikube start --node=2
+minikubev status
+minikube dashboard
+
+kubectl apply -f k8s
+kubectl get pods
+kubectl get svc
+kubectl get deployment
+kubectl delete deploymens mongo rabbitmq
+kubectl delete svc mongo rabbitmq
+kubectl logs pod-name
+
+
+LoadBalancer:
+kubectl expose deployment broker-service --type=LoadBalancer --port=8080 --target-port=8080
+minikube tunnel
+
+ingress (web server: nginx)
+minikube addons enable ingress
+
+scale up/down:
+
